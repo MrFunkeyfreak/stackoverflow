@@ -5,7 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'navbar_item.dart';
 import 'navigation_bar_mobile.dart';
 
-class TopNavigationBar extends StatelessWidget {
+class NavigationBar1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(

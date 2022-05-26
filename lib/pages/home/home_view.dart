@@ -19,8 +19,9 @@ class HomeView extends StatelessWidget {
       body: CenteredView(
         child: Column(
           children: <Widget>[
-            TopNavigationBar(),
-            Expanded(child: ScreenTypeLayout(
+            NavigationBar1(),
+            Expanded(
+             child: ScreenTypeLayout(
               mobile: HomeContentMobile(),
               desktop: HomeContentDesktop(),
             )),
