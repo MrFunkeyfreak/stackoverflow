@@ -1,15 +1,17 @@
-import 'package:fitnesstrackerwebapplication/pages/home/home_view.dart';
+import 'package:bestfitnesstrackereu/pages/layout_template/layout_template.dart';
+import 'package:bestfitnesstrackereu/routing/route_names.dart';
+import 'package:bestfitnesstrackereu/routing/router.dart';
+import 'package:bestfitnesstrackereu/services/navigation_service.dart';
 import 'package:flutter/material.dart';
+import 'locator.dart';
 
 
 void main() {
-  runApp(const MyApp());
-
+  setupLocator();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,12 +19,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         textTheme: Theme.of(context).textTheme.apply(
-          fontFamily: 'Open Sans'
-        )
+            fontFamily: 'Open Sans'
+        ),
       ),
-      home: HomeView()
+      builder: (context, child) => LayoutTemplate(
+        child1: child,
+      ),
+      navigatorKey: locator<NavigationService>().navigatorKey,
+      onGenerateRoute: generateRoute,
+      initialRoute: HomeRoute,
     );
   }
 }
-
-

@@ -1,5 +1,5 @@
-name: fitnesstrackerwebapplication
-description: A new Flutter project.
+name: bestfitnesstrackereu
+description: Website project for the university Siegen - Implementierung von Anwendungssysteme
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.0-266.8.beta <3.0.0"
+  sdk: '>=2.6.0 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -35,6 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   responsive_builder: ^0.4.2
+  get_it: ^7.2.0
+  provider: ^4.0.1
+  provider_architecture: ^1.1.1+1
 
 dev_dependencies:
   flutter_test:
@@ -60,8 +63,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  - assets/logo.png
-
+    - assets/logo.png
+  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -74,20 +77,17 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
+  fonts:
+    - family: Open Sans
+      fonts:
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
   #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-fonts:
-  - family: Open Sans
-    fonts:
-      - asset: assets/fonts/OpenSans-ExtraBold.ttf
-        weight: 800
-      - asset: assets/fonts/OpenSans-Regular.ttf
-        weight: 400
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
