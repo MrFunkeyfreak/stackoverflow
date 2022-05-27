@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../routing/route_names.dart';
-import 'navbar_item.dart';
+import '../navbar_item/navbar_item.dart';
 import 'navbar_logo.dart';
 
 class NavigationBarTabletDesktop extends StatelessWidget {

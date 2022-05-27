@@ -1,6 +1,6 @@
+import 'package:bestfitnesstrackereu/widgets/navbar_item/navbar_item.dart';
 import 'package:flutter/material.dart';
 import '../../routing/route_names.dart';
-import 'drawer_item.dart';
 import 'navigation_drawer_header.dart';
 
 class NavigationDrawer extends StatelessWidget {
@@ -21,8 +21,16 @@ class NavigationDrawer extends StatelessWidget {
           NavigationDrawerHeader(),
           //Bons: Combine the UI for this widget with the NavBarItem and make it responsive
           //The UI for the current Drawer
-          DrawerItem('Episodes', Icons.videocam, EpisodesRoute),
-          DrawerItem('About', Icons.help, AboutRoute),
+          NavBarItem(
+            'Episodes',
+            EpisodesRoute,
+            icon: Icons.videocam,
+          ),
+          NavBarItem(
+              'About',
+              AboutRoute,
+              icon: Icons.help
+          ),
         ],
       ),
     );
