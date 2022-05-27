@@ -1,8 +1,9 @@
-import 'package:bestfitnesstrackereu/widgets/navigation_bar/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import '../../widgets/centered_view/centered_view.dart';
-import '../../widgets/navigation_drawer/navigation_drawer.dart';
+import '../../widgets/top_navigation_bar/top_navigation_bar.dart';
+import '../../widgets/top_navigation_drawer/top_navigation_drawer.dart';
+
 
 class LayoutTemplate extends StatelessWidget {
   final Widget child1;
@@ -14,7 +15,7 @@ class LayoutTemplate extends StatelessWidget {
       builder: (context, sizingInformation) => Scaffold(
         backgroundColor: Colors.white,
         drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
-            ? NavigationDrawer()
+            ? TopNavigationDrawer()
             : null,
         body: CenteredView(
           child: Column(
